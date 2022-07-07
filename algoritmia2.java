@@ -11,19 +11,21 @@ import java.util.Scanner;
  *
  * @author ASUS
  */
-public class algoritmia {
+public class algoritmia2 {
 
     public static void main(String[] args) {
-       // brayan2();
-        //brayan4();
-        //brayan5();
-        //brayan6();
-        //brayan7();
-        //brayan9();
-         //brayan12();
-        //brayan13();
-        //brayan14();
-        brayan15();
+        // brayan2();
+        // brayan4();
+        // brayan5();
+        // brayan6();
+        // brayan7();
+        // brayan9();
+        // brayan12();
+        // brayan13();
+        // brayan14();
+        // brayan15();
+       // brayan16();
+        brayan17();
     }
 
     public static void brayan2() {
@@ -124,21 +126,18 @@ public class algoritmia {
         System.out.println("ingrese un numero para saber si es primo");
         numero1 = teclado.nextInt();
 
-       recibe = numero1 % 2 == 0;
-        
-        
-    }
-    
+        recibe = numero1 % 2 == 0;
 
-    public static void brayan7(){
+    }
+
+    public static void brayan7() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese Cantidad de Numeros a Analizar");
         int n = sc.nextInt();
         int sumaImpar = 0;
         int sumaPar = 0;
         for (int i = 1; i <= n; i++) {
-            System.out.println(" Ingrese numero " + i
-            );
+            System.out.println(" Ingrese numero " + i);
             int num = sc.nextInt();
             if (num % 2 == 0) {
                 sumaPar = sumaPar + num;
@@ -242,10 +241,50 @@ public class algoritmia {
         n1 = teclado.nextInt();
 
         raiz = n1 * n2;
-       
-            
 
         System.out.println("la raiz cuadrada es " + raiz);
+
+    }
+
+    public static void brayan16() {
+        Scanner teclado = new Scanner(System.in);
+        int num1 = 0;
+
+        System.out.println("ingrese un numero para saber si es par o impar");
+        num1 = teclado.nextInt();
+
+        if (num1 % 2 == 0) {
+            System.out.println("el numero es par " + num1);
+        } else {
+            System.out.println("el numero no es par " + num1);
+        }
+
+    }
+
+    public static void brayan17() {
+        Scanner teclado = new Scanner(System.in);
+        double ida = 0.0;
+        int dias = 0;
+        double vuelta = 0.0;
+        double total = 0.0;
+        double descuento = 30;
+        double distancia = 0.0;
+
+        System.out.println("ingrese el numero de dias de viaje");
+        dias = teclado.nextInt();
+        System.out.println("ingrese la distancia en km");
+        distancia = teclado.nextDouble();
+
+       total = dias * 2.5;
+
+        if (dias >= 7 && distancia >= 800){
+            descuento = total * 0.3;
+            total = total - descuento;
+            
+        }
+        ida = total / 2;
+        vuelta = total / 2;
+        System.out.println("el descuento es de " + descuento);
 
     }
 }
