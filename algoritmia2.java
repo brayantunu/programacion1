@@ -24,8 +24,9 @@ public class algoritmia2 {
         // brayan13();
         // brayan14();
         // brayan15();
-       // brayan16();
-        brayan17();
+        // brayan16();
+        // brayan17();
+        brayan19();
     }
 
     public static void brayan2() {
@@ -275,16 +276,57 @@ public class algoritmia2 {
         System.out.println("ingrese la distancia en km");
         distancia = teclado.nextDouble();
 
-       total = dias * 2.5;
+        total = dias * 2.5;
 
-        if (dias >= 7 && distancia >= 800){
+        if (dias >= 7 && distancia >= 800) {
             descuento = total * 0.3;
             total = total - descuento;
-            
+
         }
         ida = total / 2;
         vuelta = total / 2;
         System.out.println("el descuento es de " + descuento);
 
     }
+
+    public static void brayan19() {
+        Scanner teclado = new Scanner(System.in);
+
+        int dia = 0;
+        int mes = 0;
+        int año = 0;
+        //int intentar = 1;
+
+        
+
+    System.out.println("ingrese una fecha para saber la fecha del dia siguiente");
+        dia = teclado.nextInt();
+        System.out.println("ingrese el mes");
+        mes = teclado.nextInt();
+        System.out.println("ingrese el año");
+        año = teclado.nextInt();
+
+        if (dia >= 1 && dia <= 31) {
+
+            dia = dia + 1;
+
+        } else {
+            System.out.println("no se permite mas de 31 dias vuelve e intenta");
+            if (mes >= 1 && mes <= 12) {
+
+            } else {
+                System.out.println("el numero del mes que ingreso no es correcto verifique el mes en que se encuetra");
+            }
+            if (año >= 1000 && año <= 4200) {
+
+            } else {
+                System.out.println("el año que eligio esta muy fuera del futuro");
+            }
+        }
+       
+        
+        System.out.println("el dia siguiente es " + dia + " del mes " + mes + " del año " + año);
+
+    }
 }
+
