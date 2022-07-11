@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class algoritmia2 {
 
     public static void main(String[] args) {
-        // brayan2();
+         brayan2();
         // brayan4();
         // brayan5();
         // brayan6();
@@ -26,7 +26,7 @@ public class algoritmia2 {
         // brayan15();
         // brayan16();
         // brayan17();
-        brayan19();
+       // brayan19();
     }
 
     public static void brayan2() {
@@ -34,23 +34,32 @@ public class algoritmia2 {
 
         int num1 = 0;
         int num2 = 0;
-        int num3 = 0;
-        int recibe = 0;
+        
+        int recibemcd = 1;
+        int divisor = 0;
 
         System.out.println("ingrese los numeros para dividir");
         num1 = teclado.nextInt();
         num2 = teclado.nextInt();
-        if (num1 < num2) {
-            System.out.println("error en el numero divisor ingrese otro numero que se pueda dividir");
-            num1 = teclado.nextInt();
-            num2 = teclado.nextInt();
+        if (num1 <0){
+            num1 = -num1;
         }
-        while (num2 != 0) {
-            recibe = num2;
-            num2 = num1 % num2;
-            num1 = recibe;
+        if (num2 < 0){
+            num2 = -num2;
         }
-        System.out.println(num1);
+        for (divisor = 2;divisor <= num1 && divisor <= num2 ; divisor++){
+            while (num2%divisor ==0 && num2 % divisor ==0){
+            
+            recibemcd *= divisor;
+            num1 /= divisor;
+            num2 /= divisor;
+            
+            }
+            System.out.println("el maximo comun divisor de " + num1 + " y " + num2 + "es de " + recibemcd);
+
+        }
+       
+        
 
     }
 
