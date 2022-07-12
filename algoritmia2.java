@@ -285,7 +285,7 @@ public class algoritmia2 {
         System.out.println("ingrese la distancia en km");
         distancia = teclado.nextDouble();
 
-        total = dias * 2.5;
+        total = distancia * 2.5;
 
         if (dias >= 7 && distancia >= 800) {
             descuento = total * 0.3;
