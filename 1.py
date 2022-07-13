@@ -1,27 +1,22 @@
-from asyncio import subprocess
-from calendar import c
-from concurrent.futures import process
-from importlib import import_module
-from re import sub
+
+dia = int(input("ingrese un dia con el formato" + "xx"))
+mes = int(input("ingrese un mes con el formato" + "xx"))
+##año = int(input("ingrese un año con el formato" + "xxxx"))
+
+if (dia == 31   ):
+    if  (mes == 1) | (mes == 3) | (mes  == 5) | (mes == 7) | (mes == 8) | (mes == 10) | (mes == 12):
+        dia2=1
+        mes2=mes + 1
+else:
+    dia2=dia + 1
+    mes2=mes
+if (dia == 28):
+    if (mes == 2):
+        dia2 = 1
+        mes2 = mes + 1
 
 
+print("el dia siguiente es " + str(dia2))
+print("el mes siguiente es " + str(mes2))
     
-    c = input("ingrese una palabra")
-
-    for indice in c:
-         contador = contador + 1
-
-
-    for i in c:
-        if i == c[contador - 1]:
-
-             contador = contador - 1
-        if contador == 0:
-            print("la palabra " + c + " es palindrome")
-    else:
-        print("la palabra " + c + " no es palidrome")
-
-        
-    
-
 
