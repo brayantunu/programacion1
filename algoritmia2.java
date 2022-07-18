@@ -14,11 +14,11 @@ import java.util.Scanner;
 public class algoritmia2 {
 
     public static void main(String[] args) {
-         brayan2();
+        // brayan2();
         // brayan4();
         // brayan5();
         // brayan6();
-        // brayan7();
+         //brayan7();
         // brayan9();
         // brayan12();
         // brayan13();
@@ -27,6 +27,7 @@ public class algoritmia2 {
         // brayan16();
         // brayan17();
        // brayan19();
+       brayan200();
     }
 
     public static void brayan2() {
@@ -337,5 +338,23 @@ public class algoritmia2 {
         System.out.println("el dia siguiente es " + dia + " del mes " + mes + " del año " + año);
 
     }
+    public static void brayan200(){
+        Scanner teclado = new Scanner (System.in);
+System.out.println ("Ingrese Cantidad de Numeros  Analizar" );
+int n = teclado.nextInt ();
+int sumaImpar= 0;
+int sumaPar= 0 ;
+for(int i = 1; i<=n; i++){
+System.out.println ( " Ingrese numero " + i);
+int num = teclado.nextInt();
+if( num % 2 == 0 ){
+sumaPar = sumaPar + num;
+}else{
+sumaImpar = sumaImpar + num;
 }
+}
+System.out.println (" Suma de numeros Par " + sumaPar );
+System.out.println ( "Suma de numeros Impares" + sumaImpar );
+}
+    }
 
